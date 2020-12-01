@@ -1,16 +1,28 @@
 {
-  "name": "json",
+  "name": "burger",
   "version": "1.0.0",
-  "description": "a burger",
-  "main": "index.js",
+  "description": "burger app.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "author": "Evil_tosh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atoshiaki/burger.git"
+  },
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atoshiaki/burger/issues"
+  },
+  "homepage": "https://github.com/atoshiaki/burger#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "express-handlebars": "^5.2.0",
-    "mysql": "^2.18.1"
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.6"
   }
 }
