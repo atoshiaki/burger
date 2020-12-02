@@ -10,6 +10,6 @@ connection.connect(function (err) {
         console.error("error:" + err.stack);
         return;
     }
-    console.log.("connected")
+    console.log("connected");
 });
 module.exports = connection;
