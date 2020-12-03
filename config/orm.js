@@ -20,7 +20,7 @@ function translateSql(ob) {
     return arr.toString();
 }
 var orm = {
-    selectAll: function(table, cb){
+    all: function(table, cb){
         var dbQ = "SELECT * FROM " + table +";";
         connection.query(dbQ, function(err, res){
             if (err) {
@@ -33,7 +33,7 @@ var orm = {
         var dbQ = "INSERT INTO" + table + " (" + cols.toString() + ") " + "VALUES (" + createQmarks(val.length) + ") ";
         console.log(dbQ)
     },
-    updateOne: function(table, objColVals, condition, cb) {
+    update: function(table, objColVals, condition, cb) {
         var dbQ =
           "UPDATE " +
           table +
