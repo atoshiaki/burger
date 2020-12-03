@@ -2,9 +2,9 @@
 
     <div class="jumbotron">
         <h1>Order Your Burger </h1>
-        <p>Burger Orders for Pickup.</p>
+        <p>Burger orders ready for Pickup.</p>
         <br>
-        <h2>Select a Burger or Sandwich</h2>
+        <h2>Select a Burger type</h2>
         <panel>
             <form class="create-form">
                 <div class="form-group">
@@ -12,13 +12,9 @@
                     {{!-- <input type="text" id="newburger" name="burger"> --}}
                     <select data-placeholder="" id="newburger" name="burger">
                         <option value="Nothing Selected" selected>Please Select a Sandwich</option>
-                        <option value="Hamburger">Hamburger</option>
-                        <option value="CheeseBurger">CheeseBurger</option>
-                        <option value="DoubleBfChz">Double Up (double meat and cheese)</option>
-                        <option value="VeggieBurger">Veggie Burger</option>
-                        <option value="PulledPork">Pulled Pork Sandwich</option>
-                        <option value="ChichenClub">Chicken Club Sandwich</option>
-                        <option value="SteaknChz">Steak and Cheese Sandwich</option>
+                        <option value="Fire">Fire Hamburger</option>
+                        <option value="Mild">Mild CheeseBurger</option>
+                        <option value="Hot">Hot Double Up (x2 cheese and meat)</option>
                     </select>
 
                     <button type="submit" class="btn btn-success" id="addburger">
@@ -54,7 +50,7 @@
         <div class="col-sm-6">
             <div class="panel panel-default">
                 <div class="panel-heading" id="rightside"><strong>Burger is Ready for Pick Up</strong>
-                    <p>Remove order from pick up when delivered</p>
+                    <p>Remove order from pick up when chosen</p>
                 </div>
                 <div class="panel-body">
                     <ul>
