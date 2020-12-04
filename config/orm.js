@@ -1,4 +1,4 @@
-var connection = require("../config/connection");
+var connection = require("../config/connection.js");
 function createQmarks(num) {
     var arr = [];
     for (var i = 0; i < num; i++) {
@@ -19,6 +19,7 @@ function translateSql(ob) {
     }
     return arr.toString();
 }
+
 var orm = {
     all: function(table, cb){
         var dbQ = "SELECT * FROM " + table +";";
@@ -27,12 +28,14 @@ var orm = {
                 throw err;
             }
             cb(res);
-        })
+        });
     },
+
     insertOne: function(table, cols, vals, cb){
         var dbQ = "INSERT INTO" + table + " (" + cols.toString() + ") " + "VALUES (" + createQmarks(val.length) + ") ";
-        console.log(dbQ)
+        console.log(dbQ);
     },
+
     update: function(table, objColVals, condition, cb) {
         var dbQ =
           "UPDATE " +

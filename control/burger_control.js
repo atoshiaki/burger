@@ -1,5 +1,5 @@
 var express = require("express");
-var burger = require ("../model/burger");
+var burger = require ("../model/burger.js");
 var router = express.Router();
 
 router.get("/", function(req, res){
@@ -7,11 +7,12 @@ router.get("/", function(req, res){
         var hdlbrs = {
             burgers: data
         };
+        console.log(hdlbrs)
         res.render("index", hdlbrs);
     });
     router.post("api/burgers", function(req, res){
         burger.insertOne(
-            ["burger_name", "devoured"],
+            ["burgers_name", "devoured"],
             [req.body.burger_name, req.body.devoured],
             function(result) {
             res.json({ id: result.insertId});

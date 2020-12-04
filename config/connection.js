@@ -9,7 +9,7 @@ if (process.env.JAWSBD_URL){
         password: "password",
         database: "burgers_db"
     });
-}
+};
 connection.connect(function (err) {
     if (err) {
         console.error("error:" + err.stack);
