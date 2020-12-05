@@ -1,0 +1,20 @@
+.jumbotron {
+  background-color: #000000;
+  color: white;
+  margin-top: 3%;
+}
+#newburger {
+  color: gray;
+}
+#leftside {
+  background-color: teal;
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+}
+#rightside {
+  background-color: teal;
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+}

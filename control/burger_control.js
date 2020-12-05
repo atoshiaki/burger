@@ -10,7 +10,7 @@ router.get("/", function(req, res){
         console.log(hdlbrs)
         res.render("index", hdlbrs);
     });
-    router.post("api/burgers", function(req, res){
+    router.post("/api/burgers", function(req, res){
         burger.insertOne(
             ["burgers_name", "devoured"],
             [req.body.burger_name, req.body.devoured],
@@ -19,7 +19,7 @@ router.get("/", function(req, res){
             }
         );
     });
-    router.put("/api/burgers/: id", function(req, res){
+    router.put("/api/burgers/:id", function(req, res){
         var condition = "id =" + req.params.id;
         burger.update({ devoured: req.body.devoured}, condition, function (result) {
             if ((result. changeRows === 0)) {
